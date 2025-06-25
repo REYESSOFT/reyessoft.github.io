@@ -8,7 +8,17 @@
 <title>REYVAL S.A. - Auditores &amp; Consultores</title>
 <link href="style.css" rel="stylesheet"/>
 <link href="equipo.css" rel="stylesheet"/>
-<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/></head>
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<style>
+  .swiper-slide img,
+  .perfil img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+</style>
+</head>
 <body>
 <header>
 <img alt="Logo Reyval S.A." src="img/logo-reyval.jpeg"/>
@@ -87,9 +97,22 @@ function mostrarContenido(tipo) {
 <img alt="Daniel Reyes Jarama" src="img/daniel.jpg"/>
 <p><strong>Daniel Reyes Jarama</strong><br/>Magíster en Finanzas, CPA</p>
 </div>
+<div class="perfil">
+  <img src="img/foto_karen.jpeg" alt="Karen" />
+  <p><strong>Karen</strong><br/>Departamento Contable</p>
+</div>
+<div class="perfil">
+  <img src="img/foto_ginger.jpeg" alt="Ginger" />
+  <p><strong>Ginger</strong><br/>Departamento Legal</p>
+</div>
+<div class="perfil">
+  <img src="img/foto_andrea.jpeg" alt="Andrea" />
+  <p><strong>Andrea</strong><br/>Departamento de Auditoría</p>
+</div>
+
 <div class="perfil" onclick="mostrarInfo('veronica')">
 <img alt="Verónica Valle Astudillo" src="img/veronica.jpg"/>
-<p><strong>Verónica Valle de Jarama</strong><br/>Magíster en Tributación y Finanzas</p>
+<p><strong>Verónica Valle Astudillo</strong><br/>Magíster en Tributación y Finanzas</p>
 </div>
 </div>
 <div id="info-equipo" style="margin-top: 30px;"></div>
@@ -121,15 +144,20 @@ function mostrarContenido(tipo) {
     </a>
 </div>
 </section>
+
 <section id="contacto">
-<h2>Contáctanos</h2>
-<form id="formulario-contacto">
-<input placeholder="Tu nombre" required="" type="text"/>
-<input placeholder="Tu correo" required="" type="email"/>
-<textarea placeholder="Mensaje" required=""></textarea>
-<button type="submit">Enviar</button>
-</form>
+  <h2>Contáctanos</h2>
+  <form action="https://formsubmit.co/infocontacto@reyvalsa.com" method="POST">
+    <input name="name" type="text" placeholder="Tu nombre" required />
+    <input name="email" type="email" placeholder="Tu correo" required />
+    <textarea name="message" placeholder="Mensaje" required></textarea>
+    <input type="hidden" name="_next" value="https://www.reyvalsa.com/gracias.html">
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Enviar</button>
+  </form>
 </section>
+
 
 <section id="clientes">
 <h2>Nuestros Clientes Principales</h2>
