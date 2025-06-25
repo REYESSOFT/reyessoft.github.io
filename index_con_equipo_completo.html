@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>REYVAL S.A. - Auditores &amp; Consultores</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="equipo.css" rel="stylesheet"/>
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<style>
+  .swiper-slide img,
+  .perfil img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body>
+<header>
+<img alt="Logo Reyval S.A." src="img/logo-reyval.jpeg"/>
+<h1>REYVAL S.A. - Auditores &amp; Consultores</h1>
+<nav>
+<ul>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#equipo">Nuestro Equipo</a></li>
+<li><a href="#proyectos">Proyectos</a></li>
+<li><a href="#testimonios">Testimonios</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#contacto">Contacto</a></li>
+<li><a href="#clientes">Clientes</a></li></ul>
+</nav>
+</header>
+<section id="servicios">
+<h2>Servicios que Ofrecemos</h2>
+<p>
+    Para nosotros es de gran importancia como profesional independiente brindar con el más alto estándar de calidad en servicios a través de los diversos segmentos de negocio de forma personalizada con nuestro equipo humano y profesional en las siguientes áreas:
+  </p>
+<div class="botonera-servicios">
+<button onclick="mostrarContenido('auditoria')">Auditoría Financiera</button>
+<button onclick="mostrarContenido('outsourcing')">Outsourcing Contable</button>
+<button onclick="mostrarContenido('tributaria')">Consultoría Tributaria</button>
+<button onclick="mostrarContenido('talento')">Asesoría en Talento Humano</button>
+<button onclick="mostrarContenido('legal')">Consultoría Societaria y Legal</button>
+</div>
+<div id="contenido-servicio" style="margin-top: 25px;"></div>
+</section>
+<script>
+function mostrarContenido(tipo) {
+  const contenido = {
+    auditoria: `<p><strong>Auditoría Financiera:</strong> Los trabajos relacionados a este servicio se realizan aplicando las Normas Internacionales de Auditoría (NIA), y consiste en examinar los Estados Financieros del cliente con el fin de emitir una opinión sobre la razonabilidad de las cifras presentadas en dichos reportes contables. Este informe es para uso de las partes interesadas tales como; La Gerencia, Junta de Accionistas, Inversionistas, Entes de Control y demás que los soliciten como entidades financieras o crediticias.</p>`,
+    outsourcing: `<p><strong>Outsourcing Contable:</strong> Este servicio está orientado a ser responsables de la contabilidad del cliente, para lo cual se lleva in-house o externamente los registros contables, clasificando y analizando las transacciones que se generen a diario. Emitiremos los Estados Financieros mensuales aplicando las Normas Internaciones de Información Financiera – NIIF ya sea Pyme o Full, para la apropiada toma de decisiones gerenciales.</p>`,
+    tributaria: `<p><strong>Consultoría Tributaria:</strong> Este servicio está direccionado al asesoramiento fiscal de acuerdo a la normativa tributaria vigente para mitigar posibles contingentes fiscales o a la optimización de recursos impositivos. Contamos con un equipo de expertos en la materia tributaria, quienes se encuentran a la vanguardia y constante actualización de los cambios normativos que efectúan los entes de control tributario.</p>`,
+    talento: `<p><strong>Asesoría en Talento Humano:</strong> Teniendo en cuenta que los colaboradores en general de un ente se diferencian tanto en sus cualidades físicas como intelectuales, para lograr los objetivos de la Empresa es necesario que estas diferencias agreguen valor a la productividad y servicio al público. Nuestra asesoría en esta área es brindarle el servicio de:
+    <ul>
+      <li>Elaboración de manuales internos de funciones y cargos.</li>
+      <li>Elaboración de reglamento interno de trabajo, seguridad industrial y salud ocupacional.</li>
+      <li>Evaluaciones de desempeño.</li>
+      <li>Cálculos de beneficios sociales.</li>
+      <li>Mediación en conflictos trabajador-patrono.</li>
+      <li>Trámites o registros ante los entes de control laboral. (MRL y IESS)</li>
+      <li>Contratos de trabajo y actas de finiquito.</li>
+      <li>Asesoría en juicios laborales o trámites de visto bueno.</li>
+    </ul></p>`,
+    legal: `<p><strong>Consultoría Societaria y Legal:</strong> Considerando la necesidad de diversos clientes, mantenemos un convenio de asociación y colaboración estratégica con una prestigiosa firma de abogados expertos en llevar a cabo temas societarios y en las determinaciones de causas legales o judiciales, obteniendo un resultado eficaz en las resoluciones a favor de nuestros encargos.</p>`
+  };
+
+  document.getElementById("contenido-servicio").innerHTML = contenido[tipo];
+}
+</script>
+<style>
+.botonera-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.botonera-servicios button {
+  background-color: #F99C1C;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.botonera-servicios button:hover {
+  background-color: #F15A24;
+}
+</style>
+<section id="equipo">
+<h2>Nuestro Equipo</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+<div class="perfil" onclick="mostrarInfo('daniel')">
+<img alt="Daniel Reyes Jarama" src="img/daniel.jpg"/>
+<p><strong>Daniel Reyes Jarama</strong><br/>Magíster en Finanzas, CPA</p>
+</div>
+<div class="perfil">
+  <img src="img/foto_karen.jpeg" alt="Karen" />
+  <p><strong>Karen</strong><br/>Departamento Contable</p>
+</div>
+<div class="perfil">
+  <img src="img/foto_ginger.jpeg" alt="Ginger" />
+  <p><strong>Ginger</strong><br/>Departamento Legal</p>
+</div>
+<div class="perfil">
+  <img src="img/foto_andrea.jpeg" alt="Andrea" />
+  <p><strong>Andrea</strong><br/>Departamento de Auditoría</p>
+</div>
+
+<div class="perfil" onclick="mostrarInfo('veronica')">
+<img alt="Verónica Valle Astudillo" src="img/veronica.jpg"/>
+<p><strong>Verónica Valle Astudillo</strong><br/>Magíster en Tributación y Finanzas</p>
+</div>
+</div>
+<div id="info-equipo" style="margin-top: 30px;"></div>
+</section>
+<section id="proyectos">
+<h2>Proyectos</h2>
+<p>Hemos trabajado con más de 100 empresas en auditorías y planificación fiscal.</p>
+</section>
+<section id="testimonios">
+<h2>Testimonios</h2>
+<blockquote>“REYVAL S.A. transformó nuestra contabilidad. Profesionales y eficientes.” - Cliente A</blockquote>
+<blockquote>“Gracias a ellos evitamos multas y optimizamos impuestos.” - Cliente B</blockquote>
+</section>
+<section id="blog">
+<h2>Blog</h2>
+<article>
+<h3>¿Cómo preparar tu empresa para una auditoría?</h3>
+<p>Consejos prácticos para cumplir con los requisitos legales.</p>
+</article>
+</section>
+<section id="ubicacion">
+<h2>Ubicación</h2>
+<div style="text-align: center;">
+<iframe allowfullscreen="" height="400" loading="lazy" src="https://www.google.com/maps?q=-2.166370,-79.921578&amp;hl=es&amp;z=16&amp;output=embed" style="border:0; border-radius: 10px;" width="100%">
+</iframe>
+<br/><br/>
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=-2.166370,-79.921578" style="display: inline-block; background-color: #F99C1C; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;" target="_blank">
+      Cómo llegar
+    </a>
+</div>
+</section>
+
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <form action="https://formsubmit.co/infocontacto@reyvalsa.com" method="POST">
+    <input name="name" type="text" placeholder="Tu nombre" required />
+    <input name="email" type="email" placeholder="Tu correo" required />
+    <textarea name="message" placeholder="Mensaje" required></textarea>
+    <input type="hidden" name="_next" value="https://www.reyvalsa.com/gracias.html">
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+
+<section id="clientes">
+<h2>Nuestros Clientes Principales</h2>
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img alt="Grupo LQL" src="img/LQL.png"/><p>Grupo LQL</p></div>
+<div class="swiper-slide"><img alt="Agrícola Depasagri" src="img/depasagri.jpg"/><p>Agrícola Depasagri</p></div>
+<div class="swiper-slide"><img alt="DepasCam S.A." src="img/depascam.jpg"/><p>DepasCam S.A.</p></div>
+<div class="swiper-slide"><img alt="Hispanadell S.A." src="img/hispanadell.png"/><p>Hispanadell S.A.</p></div>
+<div class="swiper-slide"><img alt="IFRA Consulting" src="img/ifraconsulting.png"/><p>IFRA Consulting</p></div>
+<div class="swiper-slide"><img alt="Shrimpdany S.A." src="img/shrimpdany.png"/><p>Shrimpdany S.A.</p></div>
+<div class="swiper-slide"><img alt="TOTEM" src="img/totem.png"/><p>TOTEM</p></div>
+</div>
+</div>
+</section>
+<footer>
+<p>© 2025 REYVAL S.A. Todos los derechos reservados.</p>
+</footer>
+<script src="script.js"></script>
+<script src="equipo.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 }
+    }
+  });
+</script>
+</body>
+</html>
