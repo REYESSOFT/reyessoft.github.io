@@ -90,33 +90,38 @@ function mostrarContenido(tipo) {
   background-color: #F15A24;
 }
 </style>
+
 <section id="equipo">
 <h2>Nuestro Equipo</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+<!-- Fila 1 -->
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
 <div class="perfil" onclick="mostrarInfo('daniel')">
 <img alt="Daniel Reyes Jarama" src="img/daniel.jpg"/>
 <p><strong>Daniel Reyes Jarama</strong><br/>Magíster en Finanzas, CPA</p>
 </div>
-<div class="perfil">
-  <img src="img/foto_karen.jpeg" alt="Karen" />
-  <p><strong>Karen</strong><br/>Departamento Contable</p>
-</div>
-<div class="perfil">
-  <img src="img/foto_ginger.jpeg" alt="Ginger" />
-  <p><strong>Ginger</strong><br/>Departamento Legal</p>
-</div>
-<div class="perfil">
-  <img src="img/foto_andrea.jpeg" alt="Andrea" />
-  <p><strong>Andrea</strong><br/>Departamento de Auditoría</p>
-</div>
-
 <div class="perfil" onclick="mostrarInfo('veronica')">
 <img alt="Verónica Valle Astudillo" src="img/veronica.jpg"/>
 <p><strong>Verónica Valle Astudillo</strong><br/>Magíster en Tributación y Finanzas</p>
 </div>
 </div>
+<!-- Fila 2 -->
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+<div class="perfil">
+<img alt="Karen" src="img/foto_karen.jpeg"/>
+<p><strong>Karen</strong><br/>Departamento Contable</p>
+</div>
+<div class="perfil">
+<img alt="Ginger" src="img/foto_ginger.jpeg"/>
+<p><strong>Ginger</strong><br/>Departamento Legal</p>
+</div>
+<div class="perfil">
+<img alt="Andrea" src="img/foto_andrea.jpeg"/>
+<p><strong>Andrea</strong><br/>Departamento de Auditoría</p>
+</div>
+</div>
 <div id="info-equipo" style="margin-top: 30px;"></div>
 </section>
+
 <section id="proyectos">
 <h2>Proyectos</h2>
 <p>Hemos trabajado con más de 100 empresas en auditorías y planificación fiscal.</p>
@@ -144,21 +149,18 @@ function mostrarContenido(tipo) {
     </a>
 </div>
 </section>
-
 <section id="contacto">
-  <h2>Contáctanos</h2>
-  <form action="https://formsubmit.co/infocontacto@reyvalsa.com" method="POST">
-    <input name="name" type="text" placeholder="Tu nombre" required />
-    <input name="email" type="email" placeholder="Tu correo" required />
-    <textarea name="message" placeholder="Mensaje" required></textarea>
-    <input type="hidden" name="_next" value="https://www.reyvalsa.com/gracias.html">
-    <input type="text" name="_honey" style="display:none">
-    <input type="hidden" name="_captcha" value="false">
-    <button type="submit">Enviar</button>
-  </form>
+<h2>Contáctanos</h2>
+<form action="https://formsubmit.co/infocontacto@reyvalsa.com" method="POST">
+<input name="name" placeholder="Tu nombre" required="" type="text"/>
+<input name="email" placeholder="Tu correo" required="" type="email"/>
+<textarea name="message" placeholder="Mensaje" required=""></textarea>
+<input name="_next" type="hidden" value="https://www.reyvalsa.com/gracias.html"/>
+<input name="_honey" style="display:none" type="text"/>
+<input name="_captcha" type="hidden" value="false"/>
+<button type="submit">Enviar</button>
+</form>
 </section>
-
-
 <section id="clientes">
 <h2>Nuestros Clientes Principales</h2>
 <div class="swiper-container">
@@ -178,7 +180,6 @@ function mostrarContenido(tipo) {
 </footer>
 <script src="script.js"></script>
 <script src="equipo.js"></script>
-
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
   new Swiper('.swiper-container', {
