@@ -1,35 +1,30 @@
 header {
   background-color: #003366;
   color: white;
-  padding: 10px 0;
 }
 
-.contenedor-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.logo-titulo {
+.fila-superior {
   display: flex;
   align-items: center;
   gap: 15px;
+  padding: 10px 20px;
 }
 
-.logo-titulo img {
+.fila-superior img {
   height: 40px;
   max-width: 120px;
   object-fit: contain;
 }
 
-.logo-titulo h1 {
+.fila-superior h1 {
   font-size: 20px;
   margin: 0;
+}
+
+.fila-inferior {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
 nav ul {
